@@ -286,10 +286,10 @@ async function createTemplate() {
                     <div class="imagem">
                     <img src="${produtoAtualTemp.image}" alt="produto">
                     <div class="trocar-produto">
-                    <a href="/detalhes.html?id=${
+                    <a href="/M1S01-loja-virtual/detalhes.html?id=${
                       produtoAtualTemp.id - 1
                     }">Anterior</a>
-                        <a href="/detalhes.html?id=${
+                        <a href="/M1S01-loja-virtual/detalhes.html?id=${
                           produtoAtualTemp.id + 1
                         }">Próximo</a>
                     </div>

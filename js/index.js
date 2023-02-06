@@ -240,49 +240,48 @@
 //         }
 //     }
 // ]
-const carrinho = []
-
+const carrinho = [];
 
 async function home() {
-    const produtos = await fetch('https://fakestoreapi.com/products?limit=18')
-        .then(res => res.json())
-        .then(json => { return json })
-    let container_el = document.getElementById("main-container")
-    produtos.map((element, index) => {
-        if (index < 17) {
-            let cards_el = document.createElement("div")
-            container_el.appendChild(cards_el)
-            cards_el.innerHTML = `<div class="card">
+  const produtos = await fetch("https://fakestoreapi.com/products?limit=18")
+    .then((res) => res.json())
+    .then((json) => {
+      return json;
+    });
+  let container_el = document.getElementById("main-container");
+  produtos.map((element, index) => {
+    if (index < 17) {
+      let cards_el = document.createElement("div");
+      container_el.appendChild(cards_el);
+      cards_el.innerHTML = `<div class="card">
             <img src="${element.image}" alt="produto">
             <div class="card-elements">
                 <h4 class="title">${element.title}</h4>
                 <p class="description" >${element.description}</p>
                 <p class="price">${element.price}$</p>
-                <a id="comprar" class="comprar" href="/detalhes.html?id=${element.id}">Comprar</a>
+                <a id="comprar" class="comprar" href="/M1S01-loja-virtual/detalhes.html?id=${element.id}">Comprar</a>
             </div>
             </div>`;
-        }
-    })
+    }
+  });
 }
 
 function domReady(cb) {
-    (function checkDomReady() {
-        var state = document.readyState;
-        if (state == 'loaded' || state == 'complete') cb();
-        else setTimeout(checkDomReady, 200);
-    })();
-};
+  (function checkDomReady() {
+    var state = document.readyState;
+    if (state == "loaded" || state == "complete") cb();
+    else setTimeout(checkDomReady, 200);
+  })();
+}
 domReady(function () {
-    setTimeout(() => {
-        document.getElementById('main-container').style.display = 'grid'
-        document.getElementById('loader').style.display = 'none';
-    }, 1000);
+  setTimeout(() => {
+    document.getElementById("main-container").style.display = "grid";
+    document.getElementById("loader").style.display = "none";
+  }, 1000);
 });
 function main() {
-    home()
+  home();
 }
-main()
+main();
 
-function adicionaCarrinho() {
-    
-}
+function adicionaCarrinho() {}
