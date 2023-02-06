@@ -1,6 +1,4 @@
-let carrinho = [];
 
-let key = 0;
 // const dados = [
 //   {
 //     id: 1,
@@ -311,18 +309,9 @@ async function createTemplate() {
   }
 }
 
-const adicionaCarrinho = () => {
-  document
-    .getElementById("adicionar-carrinho")
-    .addEventListener("click", () => {
-      console.log("adicionar no carrinho");
 
-      console.log(key)
-    });
-};
 function main() {
   createTemplate();
-  adicionaCarrinho();
 }
 function domReady(cb) {
   (function checkDomReady() {
