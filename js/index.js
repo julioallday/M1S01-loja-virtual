@@ -259,7 +259,7 @@ async function home() {
                 <h4 class="title">${element.title}</h4>
                 <p class="description" >${element.description}</p>
                 <p class="price">${element.price}$</p>
-                <a id="comprar" class="comprar" href="/M1S01-loja-virtual/detalhes.html?id=${element.id}">Comprar</a>
+                <a id="carrinho" class="carrinho" href="/M1S01-loja-virtual/carrinho.html?id=${element.id}">Adicionar ao carrinho</a>
             </div>
             </div>`;
     }
